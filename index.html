@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f2">
+    <meta name="description" content="고등학교 일본어 수업을 위한 단어장">
+    <title>ことば 노트 | 일본어 단어장</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="ことば 노트 홈">
+          <span class="brand-mark" aria-hidden="true">こ</span>
+          <span>ことば<span class="brand-light">노트</span></span>
+        </a>
+        <span class="class-label"><span class="status-dot" aria-hidden="true"></span>고등 일본어 단어장</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <div class="intro-copy">
+            <p class="eyebrow">오늘도 한 단어씩</p>
+            <h1 id="page-title">일본어 단어장<span class="title-period">.</span></h1>
+            <p class="intro-text">단어를 찾아보고, 뜻을 가린 채 기억을 확인해 보세요.</p>
+          </div>
+          <div class="word-total" aria-label="전체 단어 30개">
+            <span class="total-number" id="total-count">30</span>
+            <span class="total-label">WORDS</span>
+          </div>
+        </section>
+
+        <section class="study-panel" aria-label="단어 검색 및 분류">
+          <div class="search-wrap">
+            <label class="sr-only" for="word-search">단어 검색</label>
+            <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.8" cy="10.8" r="6.8"></circle>
+              <path d="m16 16 4.2 4.2"></path>
+            </svg>
+            <input
+              id="word-search"
+              type="search"
+              placeholder="일본어, 히라가나, 한국어로 검색"
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <kbd class="search-hint" aria-hidden="true">⌕</kbd>
+          </div>
+
+          <div class="toolbar">
+            <div class="filter-group" role="group" aria-label="품사별 단어 필터">
+              <button class="filter-button is-active" type="button" data-filter="전체" aria-pressed="true">전체</button>
+              <button class="filter-button" type="button" data-filter="명사" aria-pressed="false">명사</button>
+              <button class="filter-button" type="button" data-filter="동사" aria-pressed="false">동사</button>
+              <button class="filter-button" type="button" data-filter="형용사" aria-pressed="false">형용사</button>
+            </div>
+            <button class="reveal-all-button" id="toggle-all-meanings" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"></path>
+                <circle cx="12" cy="12" r="2.5"></circle>
+              </svg>
+              <span>뜻 모두 가리기</span>
+            </button>
+          </div>
+        </section>
+
+        <div class="results-heading">
+          <h2>단어 목록</h2>
+          <p id="result-count" aria-live="polite">30개 단어</p>
+        </div>
+
+        <section class="word-grid" id="word-list" aria-label="일본어 단어 목록"></section>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">?</span>
+          <h2>검색 결과가 없어요</h2>
+          <p>다른 단어나 품사를 검색해 보세요.</p>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <p>천천히, 꾸준히. <span lang="ja">少しずつ、毎日。</span></p>
+      </footer>
+    </div>
+  </body>
+</html>
